@@ -1,4 +1,4 @@
-﻿#if DOTWEEN_ENABLED
+#if DOTWEEN_ENABLED
 using System;
 using DG.Tweening;
 using UnityEngine;
@@ -8,6 +8,7 @@ namespace BrunoMikoski.AnimationSequencer
     [Serializable]
     public abstract class AnimationStepBase
     {
+	public string name = "";
         [SerializeField]
         private float delay;
         public float Delay => delay;

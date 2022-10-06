@@ -1,4 +1,4 @@
-﻿#if DOTWEEN_ENABLED
+#if DOTWEEN_ENABLED
 using System;
 using DG.Tweening;
 using DG.Tweening.Core;
@@ -16,6 +16,10 @@ namespace BrunoMikoski.AnimationSequencer
 
         [SerializeField]
         private Color color;
+	public Color Color {
+	get { return Color; }
+        set { color = value;}
+        }
 
         private Graphic targetGraphic;
         private Color previousColor;

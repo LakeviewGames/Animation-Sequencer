@@ -1,4 +1,4 @@
-﻿#if DOTWEEN_ENABLED
+#if DOTWEEN_ENABLED
 using System;
 using System.Collections;
 using DG.Tweening;
@@ -27,7 +27,7 @@ namespace BrunoMikoski.AnimationSequencer
         }
 
         [SerializeReference]
-        private AnimationStepBase[] animationSteps = Array.Empty<AnimationStepBase>();
+        protected AnimationStepBase[] animationSteps = Array.Empty<AnimationStepBase>();
         [SerializeField]
         private UpdateType updateType = UpdateType.Normal;
         [SerializeField]
@@ -403,7 +403,7 @@ namespace BrunoMikoski.AnimationSequencer
 #endif
         public bool TryGetStepAtIndex<T>(int index, out T result) where T : AnimationStepBase
         {
-            if (index < 0 || index > animationSteps.Length - 2)
+            if (index < 0 || index > animationSteps.Length - 1)
             {
                 result = null;
                 return false;
