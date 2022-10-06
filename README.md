@@ -1,5 +1,7 @@
 # Animation Sequencer
 
+this is a test
+
 <p align="center">
     <a href="https://github.com/brunomikoski/Animation-Sequencer/blob/master/LICENSE.md">
 		<img alt="GitHub license" src ="https://img.shields.io/github/license/Thundernerd/Unity3D-PackageManagerModules" />
@@ -34,8 +36,7 @@
 
 I LOVE Tween, I love DOTween even more! But having to wait for a recompilation every time you tweak a single value on some animation it's frustrating! Even more complicated is properly have to visualize the entire animation in your head and having to wait until you reach your animation to see what you have done! That's why I created the Animation Sequencer, it is (~~cloned~~) **HEAVILY INSPIRED** from [Space Ape](https://spaceapegames.com/) amazing [Creative Engineering: Balancing & Juicing with Animations](https://youtu.be/4JoBw212Kyg) presentation.
 
-*This is still in heavy development, please use it carefully*
-
+_This is still in heavy development, please use it carefully_
 
 <p align="center">
   <img alt="Example" src="https://user-images.githubusercontent.com/600419/109826506-c299cb00-7c32-11eb-8b0d-8c0e97c4b5b7.gif">
@@ -43,34 +44,36 @@ I LOVE Tween, I love DOTween even more! But having to wait for a recompilation e
 
 </p>
 
-
 ## Features
+
 - Allow you to create a complex sequence of Tweens/Actions and play on Editor Mode!
 - User Friendly interface with a lot of customization
 - Easy to extend with project specific actions
 - Chain sequences and control entire animated windows with a single interface
 - Searchable actions allowing fast interactions and updates
-- Can be used for any type of Objects, UI or anything you want! 
+- Can be used for any type of Objects, UI or anything you want!
 
 ## Built in Steps
- - Tween Target 
-    - DOAnchoredPosition
-    - DOMove
-    - DOScale
-    - DORotate
-    - DOFade (Canvas Group)
-    - DOFade (Graphic)
-    - DOPath
-    - DOShake (Position/Rotation/Scale)
-    - DOPunch (Position/Rotation/Scale)
-    - DOText (TextMeshPro Support)
-    - DOFill  
- - Play Particle System
- - Play Animation Sequencer
+
+- Tween Target
+  - DOAnchoredPosition
+  - DOMove
+  - DOScale
+  - DORotate
+  - DOFade (Canvas Group)
+  - DOFade (Graphic)
+  - DOPath
+  - DOShake (Position/Rotation/Scale)
+  - DOPunch (Position/Rotation/Scale)
+  - DOText (TextMeshPro Support)
+  - DOFill
+- Play Particle System
+- Play Animation Sequencer
 
 ## How to use?
+
 - Animation Sequencer rely on DOTween for now, so it a requirement that you have `DOTween` on your project with properly created `asmdef` for it (Created by the `DOTween` setup panel)
-- Add the Animation Sequencer to any GameObject and start your animation! 
+- Add the Animation Sequencer to any GameObject and start your animation!
 - Using the <kbd>+</kbd> button under the `Animation Steps` you can add a new step
 - Select <kbd>Tween Target</kbd>
 - Use the <kbd>Add Actions</kbd> to add specific tweens to your target
@@ -127,7 +130,7 @@ Absolutely! The same as the step, you can add any new DOTween action by extendin
 public sealed class ChangeMaterialStrengthDOTweenAction : DOTweenActionBase
 {
     public override string DisplayName => "Change Material Strength";
-        
+
     public override Type TargetComponentType => typeof(Renderer);
 
     [SerializeField, Range(0,1)]
@@ -140,7 +143,7 @@ public sealed class ChangeMaterialStrengthDOTweenAction : DOTweenActionBase
             return false;
 
         TweenerCore<float, float, FloatOptions> materialTween = renderer.sharedMaterial.DOFloat(materialStrength, "Strength", duration);
-        
+
         SetTween(materialTween, loops, loopType);
         return true;
     }
@@ -170,13 +173,11 @@ You can use the Custom ease to define an *AnimationCurve* for the Tween.
 </details>
 
 ## System Requirements
-Unity 2018.4.0 or later versions
 
+Unity 2018.4.0 or later versions
 
 ## How to install
 
-	
-	
 <details>
 <summary>Add from OpenUPM <em>| via scoped registry, recommended</em></summary>
 
@@ -211,5 +212,3 @@ You can also add it directly from GitHub on Unity 2019.4+. Note that you won't b
 - paste `https://github.com/brunomikoski/Animation-Sequencer.git`
 - click <kbd>Add</kbd>
 </details>
-
-
