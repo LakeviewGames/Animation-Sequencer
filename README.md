@@ -1,7 +1,5 @@
 # Animation Sequencer
 
-this is a test
-
 <p align="center">
     <a href="https://github.com/brunomikoski/Animation-Sequencer/blob/master/LICENSE.md">
 		<img alt="GitHub license" src ="https://img.shields.io/github/license/Thundernerd/Unity3D-PackageManagerModules" />
