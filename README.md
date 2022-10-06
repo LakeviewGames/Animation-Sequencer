@@ -1,6 +1,6 @@
 # Animation Sequencer
 
-this is a test
+this is a test2
 
 <p align="center">
     <a href="https://github.com/brunomikoski/Animation-Sequencer/blob/master/LICENSE.md">
