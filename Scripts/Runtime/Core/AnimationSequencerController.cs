@@ -412,6 +412,21 @@ namespace BrunoMikoski.AnimationSequencer
             result = animationSteps[index] as T;
             return result != null;
         }
+
+	public bool TryGetStepWithName<T>(string name, out T result) where T : AnimationStepBase
+    	{
+        	for (int i = 0; i < animationSteps.Length; i++)
+        	{
+           	   if(animationSteps[i].name == name)
+            	   {
+                     result = animationSteps[i] as T;
+                     return true;
+            	   }
+        	}
+
+           result = null;
+           return false;
+    	}
     }
 }
 #endif
